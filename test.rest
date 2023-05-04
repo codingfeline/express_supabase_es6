@@ -1,0 +1,19 @@
+get {{url}}
+###
+get {{url}}/users 
+###
+get {{url}}/users/chloie
+###
+delete {{url}}/users/chloie
+###
+post {{url}}/users
+Content-Type: application/json
+
+{
+  "fname": "new"
+}
+
+###
+get {{url}}/restaurants
+###
+get {{url}}/restaurants/2334b925-802e-4161-b5dd-de53315c9325
