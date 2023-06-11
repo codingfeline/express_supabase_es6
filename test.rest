@@ -17,3 +17,28 @@ Content-Type: application/json
 get {{url}}/restaurants
 ###
 get {{url}}/restaurants/2334b925-802e-4161-b5dd-de53315c9325
+
+###
+POST {{url}}/login
+Content-Type: application/json
+
+{
+  "email": "test@domain.uk",
+  "password": "password" 
+}
+###
+POST {{url}}/login
+Content-Type: application/json
+
+{
+  "email": "postnaz@gmail.com",
+  "password": "password!!" 
+}
+###
+POST {{url}}/login
+Content-Type: application/json
+
+{
+  "email": "postnaz@gmail.com",
+  "password": "wrongpassword" 
+}
