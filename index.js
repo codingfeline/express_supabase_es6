@@ -38,6 +38,20 @@ app.post('/login', async (req, res) => {
   }
 })
 
-app.listen(PORT, () =>
-  console.log(`Server running on port: http://localhost:${PORT}`)
-)
+app.get('/profile', async (req, res) => {
+  // const { user, error } = await supabaseProvider.auth.getSession()
+
+  const {
+    data: { user, error },
+  } = await supabaseProvider.auth.getUser()
+
+  if (error) {
+    console.log(error)
+    res.status(401).json({ error: error.message })
+  } else {
+    console.log()
+    res.json({ user })
+  }
+})
+
+app.listen(PORT, () => console.log(`Server running on port: http://localhost:${PORT}`))
