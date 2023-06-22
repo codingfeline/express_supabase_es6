@@ -23,22 +23,22 @@ POST {{url}}/login
 Content-Type: application/json
 
 {
-  "email": "test@domain.uk",
-  "password": "password" 
+  "email": "{{user_3}}",
+  "password": "{{pass_3}}" 
 }
 ###
 POST {{url}}/login
 Content-Type: application/json
 
 {
-  "email": "postnaz@gmail.com",
-  "password": "password!!" 
+  "email": "{{user_2}}",
+  "password": "{{pass_2}}" 
 }
 ###
 POST {{url}}/login
 Content-Type: application/json
 
 {
-  "email": "postnaz@gmail.com",
+  "email": "{{user_2}}",
   "password": "wrongpassword" 
 }
